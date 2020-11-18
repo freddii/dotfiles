@@ -19,9 +19,12 @@ for file in $configfiles; do
 	ln -sf $SLR_DIR/$file $HOME/.config/$file
 done
 
-rm $HOME/.netrc
-cp $SLR_DIR/.netrc $HOME/.netrc
-chmod og-rw $HOME/.netrc
+if [ ! -f $HOME/.netrc ]; then
+#	rm $HOME/.netrc
+	cp $SLR_DIR/.netrc $HOME/.netrc
+	chmod og-rw $HOME/.netrc
+fi
+
 
 source $HOME/.bashrc
 
