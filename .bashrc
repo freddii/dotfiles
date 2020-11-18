@@ -319,7 +319,6 @@ alias nano='nano -c'
 alias hideusername="PS1=$"
 alias idebkiss="cd /tmp && git clone https://github.com/freddii/program_installers && cd program_installers && ./debkiss.sh"
 alias debkiss="$HOME/programs_setup/program_installers/debkiss.sh"
-alias debkiss-gui="$HOME/programs_setup/program_installers/debkiss-gui.sh"
 alias debkiss-update="cd $HOME/programs_setup/program_installers/ && git pull"
 alias week='date +%V'
 alias perms='stat -c "%a %n"'
