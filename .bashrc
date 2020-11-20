@@ -6,7 +6,7 @@
 # Written for  Gnu-Linux O.S.x64                  #
 #Git Hub Page : https://github.com/freddii        #
 #                                                 #
-#                                                 # 
+#                                                 #
 #  __              _     _ _ _                    #
 # / _|_ __ ___  __| | __| (_|_)                   #
 #| |_| '__/ _ \/ _` |/ _` | | |                   #
@@ -14,7 +14,7 @@
 #|_| |_|  \___|\__,_|\__,_|_|_|                   #
 #                                                 #
 #                                                 #
-#                                                 # 
+#                                                 #
 ###################################################
 
 # If not running interactively, don't do anything
@@ -307,7 +307,7 @@ alias fuck='eval $(thefuck $(fc -ln -1))'
 alias please='fuck'
 #
 alias iplocal="hostname -I | awk '{print \$1}'"
-echo "IP: $(iplocal)" 
+echo "IP: $(iplocal)"
 alias ipexternal="curl -s checkip.dyndns.org | sed 's/[^0-9.]//g'"
 alias hardwareinfo="inxi -F"
 alias powertop="sudo powertop"
@@ -1309,7 +1309,7 @@ dirvirtualenv(){
 
 function run(){
 	xdg-open $(find /usr/share/applications/ -type f | fzy);
-} 
+}
 
 function cpuusage(){
 	local NUMCPUS=`grep ^proc /proc/cpuinfo | wc -l`; local FIRST=`cat /proc/stat | awk '/^cpu / {print $5}'`; sleep 1; local SECOND=`cat /proc/stat | awk '/^cpu / {print $5}'`; USED=`echo 2 k 100 $SECOND $FIRST - $NUMCPUS / - p | dc`; echo ${USED}% CPU Usage
