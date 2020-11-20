@@ -386,7 +386,9 @@ alias dpkgi="dpkg --list | wc --lines"
 alias shred="sudo shred -n 0 -z -v" #override all with zero
 alias weather='curl wttr.in'  #weather berlin
 alias info="info --vi-keys"
-alias fzf="fzf --exact"
+alias getdeb="apt-get get-deb-file "
+#alias fzf="fzf --exact"
+
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
