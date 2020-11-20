@@ -384,6 +384,7 @@ alias ubwifi="sudo rfkill unblock wifi"
 alias apts="apt show"
 alias dpkgi="dpkg --list | wc --lines"
 alias shred="sudo shred -n 0 -z -v" #override all with zero
+alias weather='curl wttr.in'  #weather berlin
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
@@ -603,11 +604,6 @@ kdering(){
 
 pdf2text(){
 	pdftotext -layout $1 /tmp/$1.txt && xdg-open /tmp/$1.txt
-}
-
-#usage: wttr berlin
-wttr(){
-	curl wttr.in/$1
 }
 
 #reminder alarm to turn off
