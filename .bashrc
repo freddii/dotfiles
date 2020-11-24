@@ -387,6 +387,7 @@ alias shred="sudo shred -n 0 -z -v" #override all with zero
 alias weather='curl wttr.in'  #weather berlin
 alias info="info --vi-keys"
 alias getdeb="apt-get download"
+alias news='curl -sS "getnews.tech/$*"'
 #alias bat="batcat" #colorful cat
 #alias fzf="fzf --exact"
 
