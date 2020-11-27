@@ -390,6 +390,7 @@ alias getdeb="apt-get download"
 alias news='curl -sS "getnews.tech/$*"'
 #alias bat="batcat" #colorful cat
 #alias fzf="fzf --exact"
+alias whisker="xfce4-popup-whiskermenu --pointer"
 
 
 gpgdw(){
