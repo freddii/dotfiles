@@ -307,7 +307,8 @@ alias fuck='eval $(thefuck $(fc -ln -1))'
 alias please='fuck'
 #
 alias iplocal="hostname -I | awk '{print \$1}'"
-echo "IP: $(iplocal)"
+echo "IP: $(iplocal)
+STARTUP: $(uptime -s)"
 alias ipexternal="curl -s checkip.dyndns.org | sed 's/[^0-9.]//g'"
 alias hardwareinfo="inxi -F"
 alias powertop="sudo powertop"
