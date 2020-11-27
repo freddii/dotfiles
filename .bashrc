@@ -314,7 +314,7 @@ alias hardwareinfo="inxi -F"
 alias powertop="sudo powertop"
 alias iwconfig="sudo iwconfig"
 #
-alias pastebin='curl -F "sprunge=<-" http://sprunge.us'
+alias pastebin='curl -F "sprunge=<-" http://sprunge.us' #echo Hello world. | curl -F 'f:1=<-' ix.io
 alias gksu='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'
 alias nano='nano -c'
 alias hideusername="PS1=$"
