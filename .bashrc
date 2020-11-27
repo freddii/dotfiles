@@ -394,6 +394,13 @@ alias news='curl -sS "getnews.tech/$*"'
 alias whisker="xfce4-popup-whiskermenu --pointer"
 alias netris="ssh netris.rocketnine.space"
 alias locip="$(ip addr | grep "/24" | cut -d ' ' -f 6)"
+# systemd
+alias ddisable='sudo systemctl disable'
+alias denable='sudo systemctl enable'
+alias drestart='sudo systemctl restart'
+alias dstart='sudo systemctl start'
+alias dstatus='sudo systemctl status'
+alias dstop='sudo systemctl stop'
 
 
 gpgdw(){
