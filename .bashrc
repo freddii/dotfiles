@@ -391,6 +391,8 @@ alias news='curl -sS "getnews.tech/$*"'
 #alias bat="batcat" #colorful cat
 #alias fzf="fzf --exact"
 alias whisker="xfce4-popup-whiskermenu --pointer"
+alias netris="ssh netris.rocketnine.space"
+alias locip="$(ip addr | grep "/24" | cut -d ' ' -f 6)"
 
 
 gpgdw(){
