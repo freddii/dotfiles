@@ -1,4 +1,5 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -830,12 +831,6 @@ rmpatternlines(){
 	sed -i "\|$1|d" $2
 }
 
-#replace all patterns
-#usage: replacepattern "pattern" "replacestring" "filename"
-replacepattern(){
-	find . -type f -name "*.txt" -print0 | xargs -0 sed -i '' -e 's/foo/bar/g'
-}
-
 cheat(){
 	curl cheat.sh/"$1"
 }
@@ -1219,6 +1214,12 @@ check-file(){ aspell check "$1" ;}
 rpl-all(){
 	find . -type f -exec sed -i "s|$1|$2|g" {} \;
 }
+
+#replace all patterns
+#usage: replacepattern "pattern" "replacestring" "filename"
+#replacepattern(){
+#	find . -type f -name "*.txt" -print0 | xargs -0 sed -i '' -e 's/foo/bar/g'  #this does not work ??!?!?!
+#}
 
 findopen(){
 	find . -type f -exec grep -q "$1" {} \; -exec cudatext {} +
