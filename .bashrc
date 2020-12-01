@@ -402,6 +402,7 @@ alias drestart='sudo systemctl restart'
 alias dstart='sudo systemctl start'
 alias dstatus='sudo systemctl status'
 alias dstop='sudo systemctl stop'
+alias starwars="telnet towel.blinkenlights.nl" # ASCII Star Wars
 
 
 gpgdw(){
