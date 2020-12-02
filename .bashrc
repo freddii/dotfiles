@@ -404,6 +404,7 @@ alias dstatus='sudo systemctl status'
 alias dstop='sudo systemctl stop'
 alias starwars="telnet towel.blinkenlights.nl" # ASCII Star Wars
 alias lsources='grep "^[^#;]" /etc/apt/sources.list'
+alias i="sudo apt-get install"
 
 
 gpgdw(){
