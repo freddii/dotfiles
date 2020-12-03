@@ -308,8 +308,7 @@ alias fuck='eval $(thefuck $(fc -ln -1))'
 alias please='fuck'
 #
 alias iplocal="hostname -I | awk '{print \$1}'"
-echo "IP: $(iplocal)
-STARTUP: $(uptime -s)"
+echo "IP: $(iplocal)   STARTUP: $(uptime -s)"
 alias ipexternal="curl -s checkip.dyndns.org | sed 's/[^0-9.]//g'"
 alias hardwareinfo="inxi -F"
 alias powertop="sudo powertop"
@@ -407,6 +406,8 @@ alias lsources='grep "^[^#;]" /etc/apt/sources.list'
 alias i="sudo apt-get install"
 alias p="sudo apt-get purge"
 alias arm="sudo apt-get autoremove"
+alias sht="fortune showerthoughts"
+alias wamu="mpv https://hd1.wamu.org/"
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
