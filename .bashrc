@@ -406,6 +406,7 @@ alias starwars="telnet towel.blinkenlights.nl" # ASCII Star Wars
 alias lsources='grep "^[^#;]" /etc/apt/sources.list'
 alias i="sudo apt-get install"
 alias p="sudo apt-get purge"
+alias arm="sudo apt-get autoremove"
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
