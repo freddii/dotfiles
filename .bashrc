@@ -409,6 +409,7 @@ alias arm="sudo apt-get autoremove"
 alias quote='cowsay "$(fortune showerthoughts)"'
 alias xquote='xcowsay -t 10 "$(fortune showerthoughts)"'
 alias wamu="mpv https://hd1.wamu.org/"
+alias aa-status="sudo aa-status"
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
