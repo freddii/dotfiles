@@ -406,7 +406,8 @@ alias lsources='grep "^[^#;]" /etc/apt/sources.list'
 alias i="sudo apt-get install"
 alias p="sudo apt-get purge"
 alias arm="sudo apt-get autoremove"
-alias sht="fortune showerthoughts"
+alias quote='cowsay "$(fortune showerthoughts)"'
+alias xquote='xcowsay -t 10 "$(fortune showerthoughts)"'
 alias wamu="mpv https://hd1.wamu.org/"
 
 gpgdw(){
