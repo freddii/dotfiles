@@ -410,6 +410,7 @@ alias quote='cowsay "$(fortune showerthoughts)"'
 alias xquote='xcowsay -t 10 "$(fortune showerthoughts)"'
 alias wamu="mpv https://hd1.wamu.org/"
 alias aa-status="sudo aa-status"
+alias ytdl="youtube-dl"
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
