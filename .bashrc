@@ -139,6 +139,11 @@ export PATH
 #alias vpn="sudo openvpn --pkcs12 /path/to/file/xx.p12 --config /path/to/file/xx.ovpn"
 alias vpn="cd /media/v*/v*/ && sudo openvpn --config xx.ovpn"
 
+# confirm before overwriting something
+#alias cp="cp -i"
+#alias mv='mv -i'
+#alias rm='rm -i'
+
 # some more ls aliases
 alias ll='ls -alFh'
 alias la='ls -A'
@@ -203,12 +208,16 @@ alias port="netstat -tulanp"
 #top process eating memory
 #alias psmem="ps -o time,ppid,pid,nice,pcpu,pmem,user,comm -A | sort -n -k 6"
 #alias psmem5="psmem | tail -5"
-alias lmem="echo 'top mem processes:' && ps axch -o cmd:15,%mem --sort=-%mem | head"
+## get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 
+alias lmem="echo 'top mem processes:' && ps axch -o cmd:15,%mem --sort=-%mem | head"
 
 #top process eating cpu
 #alias pscpu="ps -o time,ppid,pid,nice,pcpu,pmem,user,comm -A | sort -n -k 5"
 #alias pscpu5="pscpu | tail -5"
+
 alias lcpu="echo 'top cpu processes:' && ps axch -o cmd:15,%cpu --sort=-%cpu | head"
 alias fcpu='watch grep \"cpu MHz\" /proc/cpuinfo'
 
