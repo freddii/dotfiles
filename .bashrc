@@ -374,12 +374,13 @@ alias ufwd="sudo ufw disable"
 alias ufws="sudo ufw status"
 alias gpgc="gpg --encrypt"
 alias gpgd="gpg --decrypt"
-alias jcf="journalctl --follow"
+alias jctlf="journalctl --follow"
+alias jctl="journalctl -p 3 -xb" # get error messages from journalctl
+alias logsdel10d="sudo journalctl --vacuum-time=10d"
+alias logsize="journalctl --disk-usage"
 alias joke="curl -s 'http://jokedb.xyz/random'  | jq -r '.content.text'"
 alias dmesgx="sudo dmesg --follow --human"
 alias tailx="tail -n0 -f"
-alias logsdel10d="sudo journalctl --vacuum-time=10d"
-alias logssize="journalctl --disk-usage"
 alias xclip="xclip -selection clipboard"
 alias ethstatus="ethstatus -i $(echo $(ls /sys/class/net) | grep -o '\bwl\w*' | tail -1)"
 alias iup="$HOME/.local/bin/inet-unblock.sh"
@@ -433,6 +434,7 @@ alias xquote='xcowsay -t 10 "$(fortune showerthoughts)"'
 alias wamu="mpv https://hd1.wamu.org/"
 alias aa-status="sudo aa-status"
 alias ytdl="youtube-dl"
+
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
