@@ -375,9 +375,9 @@ alias ufws="sudo ufw status"
 alias gpgc="gpg --encrypt"
 alias gpgd="gpg --decrypt"
 alias jctlf="journalctl --follow"
-alias jctl="journalctl -p 3 -xb" # get error messages from journalctl
+alias jctl="sudo journalctl -p 3 -xb" # get error messages from journalctl
 alias logsdel10d="sudo journalctl --vacuum-time=10d"
-alias logsize="journalctl --disk-usage"
+alias logsize="sudo journalctl --disk-usage"
 alias joke="curl -s 'http://jokedb.xyz/random'  | jq -r '.content.text'"
 alias dmesgx="sudo dmesg --follow --human"
 alias tailx="tail -n0 -f"
