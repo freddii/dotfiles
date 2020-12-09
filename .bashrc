@@ -1519,7 +1519,7 @@ explain(){
 	w3m "http://explainshell.com/explain?cmd="`echo $@ | tr ' ' '+'}`
 }
 
-unx()
+ex()
 {
     if [ -f $1 ] ; then
         case $1 in
@@ -1534,7 +1534,11 @@ unx()
             *.zip)       unzip $1        ;;
             *.Z)         uncompress $1   ;;
             *.7z)        7z x $1         ;;
-            *)           echo "'$1' cannot be extracted via >extract<" ;;
+        	*.deb)       ar x $1		 ;;
+      		*.tar.xz)    tar xf $1       ;;
+      		*.tar.zst)   unzstd $1       ;;      
+
+            *)           echo "'$1' cannot be extracted via ex()" ;;
         esac
     else
         echo "'$1' is not a valid file!"
