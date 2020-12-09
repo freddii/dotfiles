@@ -307,6 +307,11 @@ alias finddouble="fdupes -r ."
 alias fuck='eval $(thefuck $(fc -ln -1))'
 alias please='fuck'
 #
+# IP addresses
+alias wanip="curl -s ifconfig.me && echo"
+alias localips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias localip="localips | grep -v 127.0.0.1"
+
 alias iplocal="hostname -I | awk '{print \$1}'"
 echo "IP: $(iplocal)   STARTUP: $(uptime -s)"
 alias ipexternal="curl -s checkip.dyndns.org | sed 's/[^0-9.]//g'"
