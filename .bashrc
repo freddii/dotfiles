@@ -144,6 +144,14 @@ alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
+# Changing "ls" to "exa"
+alias lls='exa -al --color=always --group-directories-first' # my preferred listing
+alias lla='exa -a --color=always --group-directories-first'  # all files and dirs
+alias lll='exa -l --color=always --group-directories-first'  # long format
+alias llt='exa -aT --color=always --group-directories-first' # tree listing
+alias ll.='exa -a | egrep "^\."'
+
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
