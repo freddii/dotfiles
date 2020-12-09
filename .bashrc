@@ -434,6 +434,9 @@ alias xquote='xcowsay -t 10 "$(fortune showerthoughts)"'
 alias wamu="mpv https://hd1.wamu.org/"
 alias aa-status="sudo aa-status"
 alias ytdl="youtube-dl"
+# termbin
+alias tb="nc termbin.com 9999"
+
 
 
 gpgdw(){
