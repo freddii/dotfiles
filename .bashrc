@@ -140,7 +140,7 @@ export PATH
 alias vpn="cd /media/v*/v*/ && sudo openvpn --config xx.ovpn"
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
