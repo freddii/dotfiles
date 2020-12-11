@@ -137,7 +137,8 @@ PATH="$HOME/bin:$HOME/.local/bin:/sbin:$PATH"
 export PATH
 
 #alias vpn="sudo openvpn --pkcs12 /path/to/file/xx.p12 --config /path/to/file/xx.ovpn"
-alias vpn="cd /media/v*/v*/ && sudo openvpn --config xx.ovpn"
+alias vpn-my="cd /media/v*/v*/ && sudo openvpn --config xx.ovpn"
+alias vpn-proton="sudo openvpn --config /home/$USER/Downloads/ProtonVPN_server_configs/us-free-01.protonvpn.com.tcp.ovpn"
 
 # confirm before overwriting something
 #alias cp="cp -i"
