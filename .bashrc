@@ -1361,7 +1361,11 @@ dirvirtualenv(){
 #}
 
 function run(){
-	xdg-open $(find /usr/share/applications/ -type f | fzy); #/home/$USER/.local/share/applications/
+	xdg-open $(find /usr/share/applications/ -type f | fzy);
+}
+
+function runlocal(){
+	xdg-open $(find /home/$USER/.local/share/applications/ -type f | fzy);
 }
 
 function cpuusage(){
