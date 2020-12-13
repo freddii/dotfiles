@@ -27,6 +27,8 @@ esac
 #make nnn use nano
 export EDITOR=nano
 
+export NNN_PLUG='f:finder;o:fzopen;p:mocplay;d:diffs;t:nmount;v:imgview;k:kdeconnect'
+
 TELNUMBER=015123456789
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -1359,7 +1361,7 @@ dirvirtualenv(){
 #}
 
 function run(){
-	xdg-open $(find /usr/share/applications/ -type f | fzy);
+	xdg-open $(find /usr/share/applications/ -type f | fzy); #/home/$USER/.local/share/applications/
 }
 
 function cpuusage(){
