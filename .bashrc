@@ -153,11 +153,11 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Changing "ls" to "exa"
-alias llls='exa -al --color=always --group-directories-first' # my preferred listing
-alias llla='exa -a --color=always --group-directories-first'  # all files and dirs
-alias llll='exa -l --color=always --group-directories-first'  # long format
-alias lllt='exa -aT --color=always --group-directories-first' # tree listing
-alias lll.='exa -a | egrep "^\."'
+alias lls='exa -al --color=always --group-directories-first' # my preferred listing
+alias lla='exa -a --color=always --group-directories-first'  # all files and dirs
+alias lll='exa -l --color=always --group-directories-first'  # long format
+alias llt='exa -aT --color=always --group-directories-first' # tree listing
+alias ll.='exa -a | egrep "^\."'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
