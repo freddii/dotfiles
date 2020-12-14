@@ -482,13 +482,13 @@ alias de="sudo docker exec"
 alias dbt="docker build --tag" 
 alias dcp="docker container prune"
 alias dils="sudo docker image ls"
-
+alias noi="firejail --net=none "
 # no-internet
-alias no-internet="sudo -g no-internet"
-alias noi="sudo -g no-internet"
+#alias no-internet="sudo -g no-internet" #seams to be broken
+#alias noi="sudo -g no-internet" #seams to be broken
 
 # open spotify with no internet
-alias s="sudo -g no-internet spotify"
+#alias s="sudo -g no-internet spotify" #seams to be broken
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
