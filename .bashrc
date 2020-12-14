@@ -480,6 +480,14 @@ alias db="sudo docker build"
 alias dcc="sudo docker commit -c"
 alias de="sudo docker exec" alias dbt="docker build --tag" alias dcp="docker container prune"
 alias dils="sudo docker image ls"
+
+# no-internet
+alias no-internet="sudo -g no-internet"
+alias noi="sudo -g no-internet"
+
+# open spotify with no internet
+alias s="sudo -g no-internet spotify"
+
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
 gpg -d "$1" > $filen
@@ -1609,4 +1617,3 @@ function find-file() {
 gccd() {
   git clone "$1" && cd "$(basename "$1" .git)"
 }
-
