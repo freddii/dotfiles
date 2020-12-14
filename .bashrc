@@ -485,7 +485,7 @@ alias dils="sudo docker image ls"
 alias noi="firejail --net=none " #works for qutebrowser but not for firefox..
 # no-internet
 #alias no-internet="sudo -g no-internet" #seams to be broken
-alias noi2="sudo -g no-internet" #seams to be broken
+#alias noi2="sudo -g no-internet" #seams to be broken
 
 # open spotify with no internet
 #alias s="sudo -g no-internet spotify" #seams to be broken
