@@ -459,7 +459,7 @@ alias flush="rm -rf node_modules && npm i && say NPM is done"
 alias nicache="npm install --prefer-offline"
 alias nioff="npm install --offline"
 
-alias do="sudo docker"
+alias docker="sudo docker"
 alias dor="sudo docker run"
 alias dorrm="sudo docker run --rm"
 alias dorit="sudo docker run -it"
