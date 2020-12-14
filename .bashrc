@@ -478,7 +478,9 @@ alias dsp="sudo docker system prune"
 alias deit="sudo docker exec -it"
 alias db="sudo docker build"
 alias dcc="sudo docker commit -c"
-alias de="sudo docker exec" alias dbt="docker build --tag" alias dcp="docker container prune"
+alias de="sudo docker exec" 
+alias dbt="docker build --tag" 
+alias dcp="docker container prune"
 alias dils="sudo docker image ls"
 
 # no-internet
