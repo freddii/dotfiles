@@ -442,8 +442,44 @@ alias tb="nc termbin.com 9999"
 # the terminal rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
+alias ni="npm install"
+alias nid="npm install -D"
+alias nst="npm run start -s --"
+alias ns="npm run server -s --"
+alias nb="npm run build -s --"
+alias nf="npm fund -s --"
+alias nd="npm run dev -s --"
+alias nt="npm run test -s --"
+alias ntw="npm run test:watch -s --"
+alias nv="npm run validate -s --"
+alias na="npm audit"
+alias naf="npm audit fix"
+alias nr="rm -rf node_modules"
+alias flush="rm -rf node_modules && npm i && say NPM is done"
+alias nicache="npm install --prefer-offline"
+alias nioff="npm install --offline"
 
-
+alias d="sudo docker"
+alias dr="sudo docker run"
+alias drrm="sudo docker run --rm"
+alias drit="sudo docker run -it"
+alias dritrm="sudo docker run -it --rm"
+alias dritirm="sudo docker run -it --init --rm"
+alias dritrmn="sudo docker run -it --rm --name"
+alias dc="sudo docker container"
+alias ds="sudo docker start"
+alias dl="sudo docker logs"
+alias dsa="sudo docker start -a"
+alias dps="sudo docker ps"
+alias dpsa="sudo docker ps --all"
+alias dst="sudo docker stop"
+alias dk="sudo docker kill"
+alias dsp="sudo docker system prune"
+alias deit="sudo docker exec -it"
+alias db="sudo docker build"
+alias dcc="sudo docker commit -c"
+alias de="sudo docker exec" alias dbt="docker build --tag" alias dcp="docker container prune"
+alias dils="sudo docker image ls"
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
 gpg -d "$1" > $filen
@@ -1555,3 +1591,22 @@ ex()
 if [ -f /home/barney/liquidprompt/liquidprompt ]; then
 	source /home/barney/liquidprompt/liquidprompt
 fi
+
+
+function open() {
+  xdg-open $@ &
+  disown
+}
+
+function find-file() {
+  local FILE=$(fzf --preview-window=right:60% --preview='bat --color "always" {}')
+
+  if [ ! -z $FILE ]; then
+    $EDITOR $FILE
+  fi
+}
+
+gccd() {
+  git clone "$1" && cd "$(basename "$1" .git)"
+}
+
