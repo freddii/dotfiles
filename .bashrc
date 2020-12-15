@@ -1397,9 +1397,9 @@ dirvirtualenv(){
 	# 3. source virtual bin
 	source venv/bin/activate
 	# 4. you can check check if you are now inside a sandbox.
-	type pip
+	#type pip
 	# 5. Now you can install your pip package, here requirements.txt is simply a txt file containing all the packages you want. (e.g tornado==4.5.3).
-	pip install -r requirements.txt
+	#pip install -r requirements.txt
 }
 
 #twdr2(){ #sudo apt install tor
