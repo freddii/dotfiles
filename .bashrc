@@ -801,6 +801,10 @@ findstr(){
 	grep -rni $pwd -e "$1" 2>/dev/null
 }
 
+fs(){
+	grep -rni $pwd -e "$1" 2>/dev/null
+}
+
 #Finding strings and redirect errors to dev/null
 #usage: findstr "test"
 findbash(){
