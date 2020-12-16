@@ -490,6 +490,11 @@ alias noi="firejail --net=none " #works for qutebrowser but not for firefox..
 
 # open spotify with no internet
 #alias s="sudo -g no-internet spotify" #seams to be broken
+alias dud='du -d 1 -h'
+alias duf='du -sh *'
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
