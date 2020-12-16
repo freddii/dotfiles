@@ -414,7 +414,7 @@ alias dpkgi="dpkg --list | wc --lines"
 alias shred="sudo shred -n 0 -z -v" #override all with zero
 alias weather='curl wttr.in'  #weather berlin
 alias info="info --vi-keys"
-alias getdeb="apt-get download"
+alias debget="apt-get download"
 alias news='curl -sS "getnews.tech/$*"'
 #alias bat="batcat" #colorful cat
 #alias fzf="fzf --exact"
@@ -494,6 +494,8 @@ alias dud='du -d 1 -h'
 alias duf='du -sh *'
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
+
+alias debii="sudo dpkg -i"
 
 
 gpgdw(){
@@ -752,8 +754,8 @@ simtype(){
 	echo $1 | pv -qL 10
 }
 
-#usage: installdeb https://github.com/boltgolt/howdy/releases/download/v2.5.0/howdy_2.5.0.deb
-installdeb(){
+#usage: debinstall https://github.com/boltgolt/howdy/releases/download/v2.5.0/howdy_2.5.0.deb
+debinstall(){
 	cd /tmp/
 	wget $1
 	sudo dpkg -i $(echo $1 | sed 's:.*/::')
