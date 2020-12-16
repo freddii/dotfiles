@@ -343,6 +343,7 @@ alias pastebin='curl -F "sprunge=<-" http://sprunge.us' #echo Hello world. | cur
 alias gksu='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'
 alias nano='nano -c'
 alias hideusername="PS1=$"
+alias kali="PS1=\n \[\033[0;34m\]┌─────[\[\033[1;35m\]\u\[\033[0;34m\]]─────(\[\033[1;32m\]\w\[\033[0;34m\]) \n └> \[\033[1;36m\]\$ \[\033[0m\]"
 alias idebkiss="cd /tmp && git clone https://github.com/freddii/program_installers && cd program_installers && ./debkiss.sh"
 alias debkiss="$HOME/programs_setup/program_installers/debkiss.sh"
 alias debkiss-update="cd $HOME/programs_setup/program_installers/ && git pull"
