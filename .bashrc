@@ -494,6 +494,7 @@ alias dud='du -d 1 -h'
 alias duf='du -sh *'
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
+alias viewlogs="journalctl -r" #for gui use qjournal
 
 alias debii="sudo dpkg -i"
 
