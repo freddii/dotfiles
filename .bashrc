@@ -495,6 +495,7 @@ alias duf='du -sh *'
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 alias logs="journalctl -r" #for gui use qjournal
+alias logsreduce="sudo journalctl --rotate --vacuum-size=100M && sudo du -sh /var/log/journal/"
 
 alias debii="sudo dpkg -i"
 
