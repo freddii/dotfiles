@@ -498,6 +498,7 @@ alias logs="journalctl -r" #for gui use qjournal
 alias logsreduce="sudo journalctl --rotate --vacuum-size=1000M && sudo du -sh /var/log/journal/"
 
 alias debii="sudo dpkg -i"
+alias dependon="apt-cache rdepends"
 
 
 gpgdw(){
