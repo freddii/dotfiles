@@ -499,6 +499,7 @@ alias logsreduce="sudo journalctl --rotate --vacuum-size=1000M && sudo du -sh /v
 
 alias debii="sudo dpkg -i"
 alias dependon="apt-cache rdepends"
+alias codesp="codespell -q 3 -L ans"
 
 
 gpgdw(){
