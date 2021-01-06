@@ -268,6 +268,7 @@ alias gitd="git diff"
 alias gitpull="git reset --hard HEAD && git clean -xffd && git pull"
 alias gitclone1="git clone --depth=1"
 alias giti="git update-index --assume-unchanged" #gitignore
+alias gitg="git grep"
 
 #print weekday of birthday
 alias mybday='DAY=01; MONTH=01; YEAR=1911; CURRENT_YEAR=$(date +%Y); for i in $(seq $YEAR $CURRENT_YEAR); do echo -n "$i -> "; date --date "$i-$MONTH-$DAY" +%A; done'
@@ -500,6 +501,8 @@ alias logsreduce="sudo journalctl --rotate --vacuum-size=1000M && sudo du -sh /v
 alias debii="sudo dpkg -i"
 alias dependon="apt-cache rdepends"
 alias codesp="codespell -q 3 -L ans"
+alias pstree1="pstree -pul"
+alias netwhat='sudo lsof -Pni tcp'
 
 
 gpgdw(){
