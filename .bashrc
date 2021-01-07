@@ -40,7 +40,7 @@ shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
-HISTFILESIZE=2000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -503,6 +503,7 @@ alias dependon="apt-cache rdepends"
 alias codesp="codespell -q 3 -L ans"
 alias pstree1="pstree -pul"
 alias netwhat='sudo lsof -Pni tcp'
+alias bandwhich="sudo bandwhich"
 
 
 gpgdw(){
