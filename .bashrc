@@ -504,6 +504,8 @@ alias codesp="codespell -q 3 -L ans"
 alias pstree1="pstree -pul"
 alias netwhat='sudo lsof -Pni tcp'
 alias bandwhich="sudo bandwhich"
+alias deb-rdepi="apt-cache rdepends --installed"
+alias deb-rdep="apt-cache rdepends"
 
 
 gpgdw(){
