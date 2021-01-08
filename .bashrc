@@ -505,7 +505,9 @@ alias pstree1="pstree -pul"
 alias netwhat='sudo lsof -Pni tcp'
 alias bandwhich="sudo bandwhich"
 alias deb-rdepi="apt-cache rdepends --installed"
+alias deb-rrdepi="apt-cache rdepends --installed --recurse"
 alias deb-rdep="apt-cache rdepends"
+alias deb-rrdep="apt-cache rdepends --recurse"
 
 
 gpgdw(){
