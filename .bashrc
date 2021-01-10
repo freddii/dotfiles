@@ -508,7 +508,7 @@ alias deb-rdepi="apt-cache rdepends --installed"
 alias deb-rrdepi="apt-cache rdepends --installed --recurse"
 alias deb-rdep="apt-cache rdepends"
 alias deb-rrdep="apt-cache rdepends --recurse"
-alias boxtext='echo -e "This is a nice \nbox\n\nok" | boxes -d stone'
+alias godiskusage="gdu"
 
 
 gpgdw(){
@@ -1649,4 +1649,8 @@ function wtr() {
 	wget -O /tmp/wtr.png https://www.yr.no/place/Germany/North_Rhine-Westphalia/$1/avansert_meteogram.png
 	feh /tmp/wtr.png
 	rm /tmp/wtr.png
+}
+
+function textbox() {
+	echo -e $1 | boxes -d shell #boxes -d stone #"This is a nice \nbox\n\nok"
 }
