@@ -508,6 +508,7 @@ alias deb-rdepi="apt-cache rdepends --installed"
 alias deb-rrdepi="apt-cache rdepends --installed --recurse"
 alias deb-rdep="apt-cache rdepends"
 alias deb-rrdep="apt-cache rdepends --recurse"
+alias boxtext='echo -e "This is a nice \nbox\n\nok" | boxes -d stone'
 
 
 gpgdw(){
@@ -1642,4 +1643,10 @@ function find-file() {
 
 gccd() {
   git clone "$1" && cd "$(basename "$1" .git)"
+}
+
+function wtr() {
+	wget -O /tmp/wtr.png https://www.yr.no/place/Germany/North_Rhine-Westphalia/$1/avansert_meteogram.png
+	feh /tmp/wtr.png
+	rm /tmp/wtr.png
 }
