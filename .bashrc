@@ -500,7 +500,7 @@ alias logsreduce="sudo journalctl --rotate --vacuum-size=1000M && sudo du -sh /v
 
 alias debii="sudo dpkg -i"
 alias dependon="apt-cache rdepends"
-alias codesp="codespell -q 3 -L ans"
+alias codesp="codespell -q 3 -L ans >> $HOME/Desktop/codespell.log"
 alias pstree1="pstree -pul"
 alias netwhat='sudo lsof -Pni tcp'
 alias bandwhich="sudo bandwhich"
