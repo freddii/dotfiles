@@ -510,6 +510,7 @@ alias deb-rdep="apt-cache rdepends"
 alias deb-rrdep="apt-cache rdepends --recurse"
 alias godiskusage="gdu"
 alias mydog="oneko -dog -tofocus"
+alias espeak-de=="espeak -vde"
 
 
 gpgdw(){
