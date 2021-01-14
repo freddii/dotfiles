@@ -1,6 +1,6 @@
 [user]
 	name = freddii
-	email = https://fredfire11@gmail.com
+	email = https://freddii@github.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
