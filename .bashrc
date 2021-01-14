@@ -359,14 +359,12 @@ alias wdr2='mpv http://wdr-wdr2-rheinland.icecast.wdr.de/wdr/wdr2/rheinland/mp3/
 alias wdr5='mpv http://wdr-wdr5-live.icecast.wdr.de/wdr/wdr5/live/mp3/128/stream.mp3'
 alias listhardware='sudo lshw -short'
 alias systeminfo="inxi -v6"
-
 alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
 alias .3='cd ../../../'                     # Go back 3 directory levels
 alias .4='cd ../../../../'                  # Go back 4 directory levels
 alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
-
 alias countfiles='find . -type f | wc -l'
 alias speedometer="speedometer -rx $(echo $(ls /sys/class/net) | grep -o '\bwl\w*') -tx $(echo $(ls /sys/class/net) | grep -o '\bwl\w*')"
 alias networkspeedtest="speedtest-cli --simple"
@@ -441,9 +439,7 @@ alias aa-status="sudo aa-status"
 alias ytdl="youtube-dl"
 # termbin
 alias tb="nc termbin.com 9999"
-# the terminal rickroll
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash' # the terminal rickroll
 alias ni="npm install"
 alias nid="npm install -D"
 alias nst="npm run start -s --"
@@ -485,11 +481,10 @@ alias dobt="docker build --tag"
 alias docp="docker container prune"
 alias doils="sudo docker image ls"
 alias noi="firejail --net=none " #works for qutebrowser but not for firefox..
-# no-internet
+##no-internet
 #alias no-internet="sudo -g no-internet" #seams to be broken
 #alias noi2="sudo -g no-internet" #seams to be broken
-
-# open spotify with no internet
+## open spotify with no internet
 #alias s="sudo -g no-internet spotify" #seams to be broken
 alias dud='du -d 1 -h'
 alias duf='du -sh *'
@@ -497,7 +492,6 @@ alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 alias logs="journalctl -r" #for gui use qjournal
 alias logsreduce="sudo journalctl --rotate --vacuum-size=1000M && sudo du -sh /var/log/journal/"
-
 alias debii="sudo dpkg -i"
 alias dependon="apt-cache rdepends"
 alias codesp="codespell -q 3 -L ans"
