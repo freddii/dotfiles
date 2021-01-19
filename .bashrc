@@ -493,16 +493,19 @@ alias ff='find . -type f -name'
 alias logs="journalctl -r" #for gui use qjournal
 alias logsreduce="sudo journalctl --rotate --vacuum-size=1000M && sudo du -sh /var/log/journal/"
 alias debii="sudo dpkg -i"
-alias dependon="apt-cache rdepends"
 alias codesp="codespell -q 3 -L ans"
 alias codesp1="codespell -q 3 -L ans >> $HOME/Desktop/codespell.log"
 alias pstree1="pstree -pul"
 alias netwhat='sudo lsof -Pni tcp'
 alias bandwhich="sudo bandwhich"
-alias deb-rdepi="apt-cache rdepends --installed"
-alias deb-rrdepi="apt-cache rdepends --installed --recurse"
-alias deb-rdep="apt-cache rdepends"
-alias deb-rrdep="apt-cache rdepends --recurse"
+alias dependon="apt-cache depends"
+alias dependonr="apt-cache rdepends"
+alias dependon-installed="apt-cache depends --installed"
+alias dependonr-installed="apt-cache rdepends --installed"
+alias dependonr-recurse="apt-cache rdepends --recurse"
+alias dependonr-installed-recurse="apt-cache rdepends --installed --recurse"
+
+apt-cache depends
 alias godiskusage="gdu"
 alias mydog="oneko -dog -tofocus"
 alias espeak-de="espeak -vde"
