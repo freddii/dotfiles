@@ -1654,3 +1654,7 @@ function wtr() {
 function textbox() {
 	echo -e $1 | boxes -d shell #boxes -d stone #"This is a nice \nbox\n\nok"
 }
+
+function gitgetpullrequest() {
+	git fetch origin pull/$1/head:pr-$1
+}
