@@ -493,8 +493,8 @@ alias ff='find . -type f -name'
 alias logs="journalctl -r" #for gui use qjournal
 alias logsreduce="sudo journalctl --rotate --vacuum-size=1000M && sudo du -sh /var/log/journal/"
 alias debii="sudo dpkg -i"
-alias codesp="codespell -q 3 -L ans"
-alias codesp1="codespell -q 3 -L ans >> $HOME/Desktop/codespell.log"
+alias codesp="codespell -q 3 -S *.po"
+alias codesp1="codespell -q 3 -S *.po >> $HOME/Desktop/codespell.log"
 alias pstree1="pstree -pul"
 alias netwhat='sudo lsof -Pni tcp'
 alias bandwhich="sudo bandwhich"
@@ -534,6 +534,7 @@ gitpush(){
 gitsubdir(){
 	local URL=$1
 	local NEW_URL=$(echo $URL | sed 's|/tree/master|.git/trunk|g')
+	echo "using: "$NEW_URL
 	svn export $NEW_URL
 }
 
@@ -1658,4 +1659,5 @@ function textbox() {
 function gitgetpullrequest() {
 	git fetch origin pull/$1/head:pr-$1
 	git checkout pr-$1
+	#gh pr checkout 598 #from a new fork
 }
