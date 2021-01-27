@@ -274,7 +274,7 @@ alias gitg="git grep"
 alias mybday='DAY=01; MONTH=01; YEAR=1911; CURRENT_YEAR=$(date +%Y); for i in $(seq $YEAR $CURRENT_YEAR); do echo -n "$i -> "; date --date "$i-$MONTH-$DAY" +%A; done'
 
 #show all friday the 13.
-alias fr13='for y in $(seq 2018 2030); do echo -n "$y -> "; for m in $(seq 1 12); do NDATE=$(date --date "$y-$m-13" +%w); if [ $NDATE -eq 5 ]; then PRINTME=$(date --date "$y-$m-13" +%B);echo -n "$PRINTME "; fi; done; echo; done'
+alias fr13='for y in $(seq 2020 2030); do echo -n "$y -> "; for m in $(seq 1 12); do NDATE=$(date --date "$y-$m-13" +%w); if [ $NDATE -eq 5 ]; then PRINTME=$(date --date "$y-$m-13" +%B);echo -n "$PRINTME "; fi; done; echo; done'
 
 alias bigdir="du -hs */ | sort -hr | head"
 alias bigfile="find */ -size +100M"
@@ -456,7 +456,6 @@ alias nr="rm -rf node_modules"
 alias flush="rm -rf node_modules && npm i && say NPM is done"
 alias nicache="npm install --prefer-offline"
 alias nioff="npm install --offline"
-
 alias docker="sudo docker"
 alias dor="sudo docker run"
 alias dorrm="sudo docker run --rm"
@@ -504,8 +503,6 @@ alias dependon-installed="apt-cache depends --installed"
 alias dependonr-installed="apt-cache rdepends --installed"
 alias dependonr-recurse="apt-cache rdepends --recurse"
 alias dependonr-installed-recurse="apt-cache rdepends --installed --recurse"
-
-apt-cache depends
 alias godiskusage="gdu"
 alias mydog="oneko -dog -tofocus"
 alias espeak-de="espeak -vde"
