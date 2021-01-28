@@ -332,6 +332,9 @@ alias please='fuck'
 alias wanip="curl -s ifconfig.me && echo"
 alias localips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias localip="localips | grep -v 127.0.0.1"
+alias ipall="inxi -i"
+alias cpuram="inxi -t"
+alias showrepos="inxi -r"
 
 alias iplocal="hostname -I | awk '{print \$1}'"
 echo "IP: $(iplocal)   STARTUP: $(uptime -s)"
@@ -412,6 +415,7 @@ alias apts="apt show"
 alias dpkgi="dpkg --list | wc --lines"
 alias shred="sudo shred -n 0 -z -v" #override all with zero
 alias weather='curl wttr.in'  #weather berlin
+alias wtr2="inxi -w"
 alias info="info --vi-keys"
 alias debget="apt-get download"
 alias news='curl -sS "getnews.tech/$*"'
@@ -1064,7 +1068,7 @@ apt-history(){
 	echo "apt-history written to ~/Desktop/allhistory.log"
 }
 
-nethogswlan(){
+nethogsx(){
 #	wlan0=$(iwgetid | grep -o '\bwl\w*' | tail -1)
 	local wlan0=$(echo $(ls /sys/class/net) | grep -o '\bwl\w*' | tail -1)
 	echo $wlan0
