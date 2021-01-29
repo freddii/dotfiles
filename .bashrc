@@ -510,6 +510,7 @@ alias dependonr-installed-recurse="apt-cache rdepends --installed --recurse"
 alias godiskusage="gdu"
 alias mydog="oneko -dog -tofocus"
 alias espeak-de="espeak -vde"
+alias a="adb install"
 
 
 gpgdw(){
