@@ -823,6 +823,10 @@ fs(){
 	grep -rni $pwd -e "$1" 2>/dev/null
 }
 
+fman(){
+	grep -rni /usr/share/man/ -e "$1" 2>/dev/null
+}
+
 #Finding strings and redirect errors to dev/null
 #usage: findstr "test"
 findbash(){
