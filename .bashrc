@@ -511,6 +511,8 @@ alias godiskusage="gdu"
 alias mydog="oneko -dog -tofocus"
 alias espeak-de="espeak -vde"
 alias a="adb install"
+alias ashow="apt show"
+alias defragx="exec e4defrag /home >/dev/null 2>&1"
 
 
 gpgdw(){
@@ -821,10 +823,6 @@ findstr(){
 
 fs(){
 	grep -rni $pwd -e "$1" 2>/dev/null
-}
-
-fman(){
-	grep -rni /usr/share/man/ -e "$1" 2>/dev/null
 }
 
 #Finding strings and redirect errors to dev/null
@@ -1666,4 +1664,8 @@ function gitgetpullrequest() {
 	git fetch origin pull/$1/head:pr-$1
 	git checkout pr-$1
 	#gh pr checkout 598 #from a new fork
+}
+
+fman(){
+	grep -rni /usr/share/man/ -e "$1" 2>/dev/null
 }
