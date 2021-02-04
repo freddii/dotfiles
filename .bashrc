@@ -513,6 +513,7 @@ alias espeak-de="espeak -vde"
 alias a="adb install"
 alias ashow="apt show"
 alias defragx="exec e4defrag /home >/dev/null 2>&1"
+alias aptlog="apt changelog" #packagename
 
 
 gpgdw(){
@@ -1668,4 +1669,8 @@ function gitgetpullrequest() {
 
 fman(){
 	grep -rni /usr/share/man/ -e "$1" 2>/dev/null
+}
+
+trans(){
+curl -X POST "https://libretranslate.com/translate" -H  "accept: application/json" -H  "Content-Type: application/x-www-form-urlencoded" -d "q="$1"&source=en&target=de"
 }
