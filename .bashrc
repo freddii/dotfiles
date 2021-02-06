@@ -514,6 +514,7 @@ alias a="adb install"
 alias ashow="apt show"
 alias defragx="exec e4defrag /home >/dev/null 2>&1"
 alias aptlog="apt changelog" #packagename
+alias whichlineisexecuted="bash -x"
 
 
 gpgdw(){
@@ -1673,4 +1674,9 @@ fman(){
 
 trans(){
 curl -X POST "https://libretranslate.com/translate" -H  "accept: application/json" -H  "Content-Type: application/x-www-form-urlencoded" -d "q="$1"&source=en&target=de"
+}
+
+#e.g.: dpkggrep epoptes-client desktop
+dpkggrep(){
+	dpkg -L $1 | grep $2 #-rni $2
 }
