@@ -515,6 +515,7 @@ alias ashow="apt show"
 alias defragx="exec e4defrag /home >/dev/null 2>&1"
 alias aptlog="apt changelog" #packagename
 alias whichlineisexecuted="bash -x"
+alias powertoph="cd /tmp && powertop --html && xdg-open /tmp/powertop.html && cd ~"
 
 
 gpgdw(){
