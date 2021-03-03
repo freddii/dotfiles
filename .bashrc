@@ -1218,6 +1218,12 @@ ts100(){
 	mpv $streamurl
 }
 
+hj(){
+	local streamurl=$(wget https://www.zdf.de/rss/podcast/video/zdf/nachrichten/heute-journal -O - | egrep 'https://podfileszdf-a.akamaihd.net/podcast/zdf_podcasts/[0-9,_.-\/]{1,20}_sendung_hjo[0-9,_.-\/]{1,20}_sendung_hjo_[A-Za-z0-9,_.-\/]{1,30}.mp4' -o | head -1)
+	echo "streamurl: "$streamurl
+	mpv $streamurl
+}
+
 # wondershaper is not working with ipv6..
 #wondershaperon(){
 #	local wlan0=$(echo $(ls /sys/class/net) | grep -o '\bwl\w*' | tail -1)
