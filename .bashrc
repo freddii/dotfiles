@@ -1207,13 +1207,13 @@ wdrnews(){
 }
 
 ts(){
-	local streamurl="https:"$(wget https://www.tagesschau.de/sendung/letzte-sendung/ -O - | egrep '//download.media.tagesschau.de/video/[A-Za-z0-9,_.-\/]{1,50}TV-[0-9,_.-]{1,40}.webm.h264.mp4' -o)
+	local streamurl="https:"$(wget https://www.tagesschau.de/sendung/letzte-sendung/ -O - | egrep '//download.media.tagesschau.de/video/[A-Za-z0-9,_.-\/]{1,50}TV-[0-9,_.-]{1,40}.webm.h264.mp4' -o | head -1)
 	echo "streamurl: "$streamurl
 	mpv $streamurl
 }
 
 ts100(){
-	local streamurl="https:"$(wget https://www.tagesschau.de/100sekunden/ -O - | egrep '//download.media.tagesschau.de/video/[A-Za-z0-9,_.-\/]{1,50}TV-[0-9,_.-]{1,40}.webm.h264.mp4' -o)
+	local streamurl="https:"$(wget https://www.tagesschau.de/100sekunden/ -O - | egrep '//download.media.tagesschau.de/video/[A-Za-z0-9,_.-\/]{1,50}TV-[0-9,_.-]{1,40}.webm.h264.mp4' -o | head -1)
 	echo "streamurl: "$streamurl
 	mpv $streamurl
 }
