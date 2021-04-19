@@ -265,7 +265,7 @@ alias gita="git log --format='%aN' | sort -u"
 #
 alias gits="git status"
 alias gitd="git diff"
-alias gitpull="git reset --hard HEAD && git clean -xffd && git pull"
+alias gitpull="git reset --hard HEAD && git clean -xffd && git pull --rebase"
 alias gitclone1="git clone --depth=1"
 alias giti="git update-index --assume-unchanged" #gitignore
 alias gitg="git grep"
