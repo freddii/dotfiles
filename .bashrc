@@ -570,6 +570,15 @@ yt2video(){
 	cd -
 }
 
+yt2videolow(){
+	mkdir -p $HOME/Videos
+#	sudo -H \
+#	pip3 install --upgrade youtube-dl
+	cd $HOME/Videos
+	youtube-dl -f hls-1260 "$1"
+	cd -
+}
+
 #usage: yt2vlc "shaun das schaf"
 yt2vlc(){
 	GET https://www.youtube.com/results?search_query=$(echo $1 | sed -e 's/ /+/g') | sed -ne '/<a href="\/watch.*title="/s/.*<a href="\(\/watch[^"]*\)".* title="\([^"]*\)".*/https:\/\/www.youtube.com\1/p' | vlc -
