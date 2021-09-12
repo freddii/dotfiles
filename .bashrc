@@ -1697,3 +1697,8 @@ curl -X POST "https://libretranslate.com/translate" -H  "accept: application/jso
 dpkggrep(){
 	dpkg -L $1 | grep $2 #-rni $2
 }
+
+get_color() {
+  picked=$(xcolor)
+  notify-send --icon=xcolor "xcolor" "'$picked' was copied to the clipboard"
+}
