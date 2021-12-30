@@ -20,4 +20,3 @@ fi
 # DOES NOT WORK HERE! MOVED TO .bashrc
 #-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 #-export PATH
-

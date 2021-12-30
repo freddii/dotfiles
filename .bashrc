@@ -933,7 +933,8 @@ veracrypt -d
 #usage2: slbackup
 slbackup(){
 mkdir -p /home/$USER/Documents/backups
-tar -zcf "/home/$USER/Documents/backups/archive-chat-$(date +"%H-%M-%S_%d-%m-%Y")$1.tgz" /home/$USER/.secondlife/$1
+#tar -zcf "/home/$USER/Documents/backups/archive-chat-$(date +"%H-%M-%S_%d-%m-%Y")$1.tgz" /home/$USER/.secondlife/$1
+tar -zcf "/home/$USER/Documents/backups/archive-chat-$(date +"%H-%M-%S_%d-%m-%Y")$1.tgz" /home/$USER/.firestorm_x64/$1
 }
 
 # Create a new directory and enter it
