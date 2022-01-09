@@ -207,6 +207,9 @@ alias ports-active="sudo netstat -tulpen | grep LISTEN"
 alias ports-open="sudo lsof -i | grep LISTEN"
 alias ports-all="sudo netstat -tulpen"
 alias port="netstat -tulanp"
+alias ports-rpc="rpcinfo -p"
+alias ports-extended="sudo netstat --program --numeric-hosts --numeric-ports --extend"
+alias ports-udp-tcp-raw="netstat -autwp"
 
 #top process eating memory
 #alias psmem="ps -o time,ppid,pid,nice,pcpu,pmem,user,comm -A | sort -n -k 6"
@@ -517,6 +520,7 @@ alias aptlog="apt changelog" #packagename
 alias whichlineisexecuted="bash -x"
 alias powertoph="cd /tmp && powertop --html && xdg-open /tmp/powertop.html && cd ~"
 alias hwprobeupload="sudo -E hw-probe -all -upload"
+alias deb-info="apt-cache show"
 
 
 gpgdw(){
