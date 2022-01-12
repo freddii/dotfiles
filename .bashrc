@@ -520,8 +520,8 @@ alias aptlog="apt changelog" #packagename
 alias whichlineisexecuted="bash -x"
 alias powertoph="cd /tmp && powertop --html && xdg-open /tmp/powertop.html && cd ~"
 alias hwprobeupload="sudo -E hw-probe -all -upload"
-alias deb-info="apt-cache show"
-
+alias debinfo="apt-cache show"
+alias bauhupg="cd /home/$USER/programs_setup/bauh && bauh_env/bin/pip install bauh --upgrade"
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
@@ -790,7 +790,7 @@ simtype(){
 }
 
 #usage: debinstall https://github.com/boltgolt/howdy/releases/download/v2.5.0/howdy_2.5.0.deb
-debinstall(){
+deb-install-from-www(){
 	cd /tmp/
 	wget $1
 	sudo dpkg -i $(echo $1 | sed 's:.*/::')
@@ -1707,3 +1707,14 @@ get_color() {
   picked=$(xcolor)
   notify-send --icon=xcolor "xcolor" "'$picked' was copied to the clipboard"
 }
+
+#git-subdir() {
+#git clone \
+#  --depth 1  \
+#  --filter=blob:none  \
+#  --sparse \
+#  https://codeberg.org/triallax/dotfiles \
+#;
+#cd triallax/dotfiles
+#git sparse-checkout set qutebrowser/greasemonkey
+#}
