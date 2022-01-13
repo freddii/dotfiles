@@ -523,7 +523,7 @@ alias hwprobeupload="sudo -E hw-probe -all -upload"
 alias debinfo="apt-cache show"
 alias bauhupg="cd /home/$USER/programs_setup/bauh && bauh_env/bin/pip install bauh --upgrade"
 alias sessiontree="loginctl session-status 2"
-alias apt-installed="apt list --installed"
+alias apt-installed="apt list --installed" #apt list --installed | cut -f1 -d"/"
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
@@ -1701,6 +1701,7 @@ curl -X POST "https://libretranslate.com/translate" -H  "accept: application/jso
 }
 
 #e.g.: dpkggrep epoptes-client desktop
+# dpkg -L espanso #to remove all files..
 dpkggrep(){
 	dpkg -L $1 | grep $2 #-rni $2
 }
@@ -1720,3 +1721,11 @@ get_color() {
 #cd triallax/dotfiles
 #git sparse-checkout set qutebrowser/greasemonkey
 #}
+
+apt-desc() { 
+	apt-cache show "$@" | grep -E "^Package|^Description-en|^ ";
+}
+
+apt-desc-all() {
+	apt-desc $(apt list --installed | cut -f1 -d"/")
+} 
