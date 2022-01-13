@@ -1726,6 +1726,6 @@ apt-desc() {
 	apt-cache show "$@" | grep -E "^Package|^Description-en|^ ";
 }
 
-apt-desc-all() {
+apt-desc-installed() {
 	apt-desc $(apt list --installed | cut -f1 -d"/")
 } 
