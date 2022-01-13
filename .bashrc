@@ -523,6 +523,7 @@ alias hwprobeupload="sudo -E hw-probe -all -upload"
 alias debinfo="apt-cache show"
 alias bauhupg="cd /home/$USER/programs_setup/bauh && bauh_env/bin/pip install bauh --upgrade"
 alias sessiontree="loginctl session-status 2"
+alias apt-installed="apt list --installed"
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
