@@ -135,7 +135,7 @@ fi
 
 # set PATH so it includes user's private bin directories
 # PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-PATH="$HOME/bin:$HOME/.local/bin:/sbin:$PATH"
+PATH="$HOME/.cargo/bin:$HOME/bin:$HOME/.local/bin:/sbin:$PATH"
 export PATH
 
 #alias vpn="sudo openvpn --pkcs12 /path/to/file/xx.p12 --config /path/to/file/xx.ovpn"
@@ -522,6 +522,7 @@ alias powertoph="cd /tmp && powertop --html && xdg-open /tmp/powertop.html && cd
 alias hwprobeupload="sudo -E hw-probe -all -upload"
 alias debinfo="apt-cache show"
 alias bauhupg="cd /home/$USER/programs_setup/bauh && bauh_env/bin/pip install bauh --upgrade"
+alias sessiontree="loginctl session-status 2"
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
