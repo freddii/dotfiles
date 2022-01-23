@@ -1741,9 +1741,9 @@ tmux4net(){
 	tmux split-window -d -t 0 -h; \
 	tmux split-window -d -t 2 -h; \
 	tmux send-keys -t 0 'sudo etherape' enter; \
-	tmux send-keys -t 1 'sudo jnettop -i wlan0' enter; \
+	tmux send-keys -t 1 'sudo jnettop -i wlp5s0' enter; \
 	tmux send-keys -t 2 'sudo bandwhich' enter; \
-	tmux send-keys -t 3 'nethogsx' enter; \
+	tmux send-keys -t 3 'sudo nethogs wlp5s0' enter; \
 	tmux select-pane -t 3; \
 	tmux attach -t tmux4net)
 ##tmux send-keys -t 3 "$1"; \	
