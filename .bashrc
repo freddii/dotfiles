@@ -225,6 +225,7 @@ alias lmem="echo 'top mem processes:' && ps axch -o cmd:15,%mem --sort=-%mem | h
 #alias pscpu5="pscpu | tail -5"
 
 alias lcpu="echo 'top cpu processes:' && ps axch -o cmd:15,%cpu --sort=-%cpu | head"
+alias lcpu-all="echo 'top cpu processes:' && ps axch -o cmd:15,%cpu --sort=-%cpu"
 alias fcpu='watch grep \"cpu MHz\" /proc/cpuinfo'
 
 # show your processes
@@ -411,7 +412,7 @@ alias recoverfiles="foremost -t all -v -i /dev/sdcard -/home/$USER/Desktop/recov
 alias mat="mat2"
 alias cam="ffplay -f v4l2 -framerate 25 -video_size 640x480 -i "${1:-/dev/video0}" -vf hflip"
 alias busy="cat /dev/urandom | hexdump -C | grep 'ca fe'"
-alias thonny="$HOME/apps/thonny/bin/thonny %F"
+#alias thonny="$HOME/apps/thonny/bin/thonny %F"
 alias bwifi="sudo rfkill block wifi"
 alias ubwifi="sudo rfkill unblock wifi"
 alias apts="apt show"
@@ -434,7 +435,7 @@ alias drestart='sudo systemctl restart'
 alias dstart='sudo systemctl start'
 alias dstatus='sudo systemctl status'
 alias dstop='sudo systemctl stop'
-alias starwars="telnet towel.blinkenlights.nl" # ASCII Star Wars
+#alias starwars="telnet towel.blinkenlights.nl" # ASCII Star Wars
 alias lsources='grep "^[^#;]" /etc/apt/sources.list'
 alias i="sudo apt-get install"
 alias p="sudo apt-get purge"
@@ -442,11 +443,11 @@ alias arm="sudo apt-get autoremove"
 alias quote='cowsay "$(fortune showerthoughts)"'
 alias xquote='xcowsay -t 10 "$(fortune showerthoughts)"'
 alias wamu="mpv https://hd1.wamu.org/"
-alias aa-status="sudo aa-status"
+alias aa-status="sudo aa-status" #apparmor
 alias ytdl="youtube-dl"
 # termbin
-alias tb="nc termbin.com 9999"
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash' # the terminal rickroll
+#alias tb="nc termbin.com 9999"
+#alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash' # the terminal rickroll
 alias ni="npm install"
 alias nid="npm install -D"
 alias nst="npm run start -s --"
@@ -493,7 +494,7 @@ alias noi="firejail --net=none " #works for qutebrowser but not for firefox..
 ## open spotify with no internet
 #alias s="sudo -g no-internet spotify" #seams to be broken
 alias dud='du -d 1 -h'
-alias duf='du -sh *'
+alias duff='du -sh *'
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 alias logs="journalctl -r" #for gui use qjournal
@@ -503,7 +504,7 @@ alias codesp="codespell -q 3 -S *.po"
 alias codesp1="codespell -q 3 -S *.po >> $HOME/Desktop/codespell.log"
 alias pstree1="pstree -pul"
 alias netwhat='sudo lsof -Pni tcp'
-alias bandwhich="sudo bandwhich"
+alias bandwhichx="sudo bandwhich"
 alias dependon="apt-cache depends"
 alias dependonr="apt-cache rdepends"
 alias dependon-installed="apt-cache depends --installed"
@@ -511,7 +512,7 @@ alias dependonr-installed="apt-cache rdepends --installed"
 alias dependonr-recurse="apt-cache rdepends --recurse"
 alias dependonr-installed-recurse="apt-cache rdepends --installed --recurse"
 alias godiskusage="gdu"
-alias mydog="oneko -dog -tofocus"
+#alias mydog="oneko -dog -tofocus" #breaks cursor
 alias espeak-de="espeak -vde"
 alias a="adb install"
 alias ashow="apt show"
@@ -524,6 +525,8 @@ alias debinfo="apt-cache show"
 alias bauhupg="cd /home/$USER/programs_setup/bauh && bauh_env/bin/pip install bauh --upgrade"
 alias sessiontree="loginctl session-status 2"
 alias apt-installed="apt list --installed" #apt list --installed | cut -f1 -d"/"
+alias jnettopx="sudo jnettop -i $(echo $(ls /sys/class/net) | grep -o '\bwl\w*' | tail -1)"
+#alias xwlan0x="echo $(ls /sys/class/net) | grep -o '\bwl\w*' | tail -1"
 
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
@@ -1729,3 +1732,21 @@ apt-desc() {
 apt-desc-installed() {
 	apt-desc $(apt list --installed | cut -f1 -d"/")
 } 
+
+# e.g. tmux4run "sudo apt update"
+tmux4net(){
+	tmux attach -t tmux4net || \
+	(tmux new-session -s tmux4net -d; \
+	tmux split-window -d -t 0 -v; \
+	tmux split-window -d -t 0 -h; \
+	tmux split-window -d -t 2 -h; \
+	tmux send-keys -t 0 'sudo etherape' enter; \
+	tmux send-keys -t 1 'sudo jnettop -i wlan0' enter; \
+	tmux send-keys -t 2 'sudo bandwhich' enter; \
+	tmux send-keys -t 3 'nethogsx' enter; \
+	tmux select-pane -t 3; \
+	tmux attach -t tmux4net)
+##tmux send-keys -t 3 "$1"; \	
+##	tmux send-keys -t 0 'clear && echo -e "Ctrl-b release keys then d #detach session \nCtrl-b release keys then z #panel full screen, shrink back  \nCtrl-b release keys then o #switch trough sessions \ntmux ls #list sessions"' enter; \
+}
+#tmux with bmon, bandwhich,gdu,duf,iftopx,nettopx
