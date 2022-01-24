@@ -428,7 +428,7 @@ alias news='curl -sS "getnews.tech/$*"'
 #alias fzf="fzf --exact"
 alias whisker="xfce4-popup-whiskermenu --pointer"
 alias netris="ssh netris.rocketnine.space"
-alias locip="$(ip addr | grep "/24" | cut -d ' ' -f 6)"
+#alias locip="$(ip addr | grep "/24" | cut -d ' ' -f 6)"
 # systemd
 alias ddisable='sudo systemctl disable'
 alias denable='sudo systemctl enable'
