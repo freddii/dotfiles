@@ -341,7 +341,8 @@ alias cpuram="inxi -t"
 alias showrepos="inxi -r"
 
 alias iplocal="hostname -I | awk '{print \$1}'"
-echo "IP: $(iplocal)   STARTUP: $(uptime -s)"
+echo "STARTUP: $(uptime -s)"
+# IP: $(iplocal)
 alias ipexternal="curl -s checkip.dyndns.org | sed 's/[^0-9.]//g'"
 alias hardwareinfo="inxi -F"
 alias powertop="sudo powertop"
@@ -373,7 +374,7 @@ alias .4='cd ../../../../'                  # Go back 4 directory levels
 alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
 alias countfiles='find . -type f | wc -l'
-alias speedometer="speedometer -rx $(echo $(ls /sys/class/net) | grep -o '\bwl\w*') -tx $(echo $(ls /sys/class/net) | grep -o '\bwl\w*')"
+#alias speedometer="speedometer -rx $(echo $(ls /sys/class/net) | grep -o '\bwl\w*') -tx $(echo $(ls /sys/class/net) | grep -o '\bwl\w*')"
 alias networkspeedtest="speedtest-cli --simple"
 alias simplehttpserver="python -m SimpleHTTPServer 9090"
 alias busyboxserver="busybox httpd -p 8000 -v -f"
@@ -392,7 +393,7 @@ alias joke="curl -s 'http://jokedb.xyz/random'  | jq -r '.content.text'"
 alias dmesgx="sudo dmesg --follow --human"
 alias tailx="tail -n0 -f"
 alias xclip="xclip -selection clipboard"
-alias ethstatus="ethstatus -i $(echo $(ls /sys/class/net) | grep -o '\bwl\w*' | tail -1)"
+#alias ethstatus="ethstatus -i $(echo $(ls /sys/class/net) | grep -o '\bwl\w*' | tail -1)"
 alias iup="$HOME/.local/bin/inet-unblock.sh"
 alias idown="$HOME/.local/bin/inet-block.sh"
 #https://pimylifeup.com/raspberry-pi-git-server/
@@ -525,7 +526,7 @@ alias debinfo="apt-cache show"
 alias bauhupg="cd /home/$USER/programs_setup/bauh && bauh_env/bin/pip install bauh --upgrade"
 alias sessiontree="loginctl session-status 2"
 alias apt-installed="apt list --installed" #apt list --installed | cut -f1 -d"/"
-alias jnettopx="sudo jnettop -i $(echo $(ls /sys/class/net) | grep -o '\bwl\w*' | tail -1)"
+#alias jnettopx="sudo jnettop -i $(echo $(ls /sys/class/net) | grep -o '\bwl\w*' | tail -1)"
 #alias xwlan0x="echo $(ls /sys/class/net) | grep -o '\bwl\w*' | tail -1"
 
 gpgdw(){
