@@ -484,8 +484,8 @@ alias dosp="sudo docker system prune"
 alias doeit="sudo docker exec -it"
 alias dob="sudo docker build"
 alias docc="sudo docker commit -c"
-alias doe="sudo docker exec" 
-alias dobt="docker build --tag" 
+alias doe="sudo docker exec"
+alias dobt="docker build --tag"
 alias docp="docker container prune"
 alias doils="sudo docker image ls"
 alias noi="firejail --net=none " #works for qutebrowser but not for firefox..
@@ -1396,7 +1396,7 @@ gitbkpuser(){
 	mkdir $FOLDER
 	cd $FOLDER
 	local GITUSER=$1;
-	local PAGE=1; 
+	local PAGE=1;
 	curl "https://api.github.com/users/$GITUSER/repos?page=$PAGE&per_page=100" | grep -e 'git_url*' | cut -d \" -f 4 | xargs -L1 git clone
 }
 
@@ -1443,11 +1443,18 @@ listenmicstop(){
 	pactl unload-module module-loopback
 }
 
-#usage: playproxy http://www.dradio.de/streaming/dkultur.m3u
-playproxy(){
+#usage: playproxympv http://www.dradio.de/streaming/dkultur.m3u
+playproxympv(){
 	local proxyurl="http://"$(wget --quiet -U "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)" "https://hidemy.name/de/proxy-list/?maxtime=1500&type=h&anon=4#list" -O - | egrep '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}</td><td>[0-9]{1,4}' -o | head -1 | sed 's|</td><td>|:|g')
 	echo "your proxyurl is: "$proxyurl
 	mpv --stream-lavf-o-append=http_proxy=$proxyurl "$1"
+}
+
+#usage: playproxyvlc http://www.dradio.de/streaming/dkultur.m3u
+playproxyvlc(){
+	local proxyurl="http://"$(wget --quiet -U "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)" "https://hidemy.name/de/proxy-list/?maxtime=1500&type=h&anon=4#list" -O - | egrep '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}</td><td>[0-9]{1,4}' -o | head -1 | sed 's|</td><td>|:|g')
+	echo "your proxyurl is: "$proxyurl
+	vlc --http-proxy=$proxyurl "$1"
 }
 
 dirvirtualenv(){
@@ -1649,7 +1656,7 @@ ex()
             *.7z)        7z x $1         ;;
         	*.deb)       ar x $1		 ;;
       		*.tar.xz)    tar xf $1       ;;
-      		*.tar.zst)   unzstd $1       ;;      
+      		*.tar.zst)   unzstd $1       ;;
 
             *)           echo "'$1' cannot be extracted via ex()" ;;
         esac
@@ -1726,13 +1733,13 @@ get_color() {
 #git sparse-checkout set qutebrowser/greasemonkey
 #}
 
-apt-desc() { 
+apt-desc() {
 	apt-cache show "$@" | grep -E "^Package|^Description-en|^ ";
 }
 
 apt-desc-installed() {
 	apt-desc $(apt list --installed | cut -f1 -d"/")
-} 
+}
 
 # e.g. tmux4run "sudo apt update"
 tmux4net(){
@@ -1747,7 +1754,7 @@ tmux4net(){
 	tmux send-keys -t 3 'sudo nethogs wlp5s0' enter; \
 	tmux select-pane -t 3; \
 	tmux attach -t tmux4net)
-##tmux send-keys -t 3 "$1"; \	
+##tmux send-keys -t 3 "$1"; \
 ##	tmux send-keys -t 0 'clear && echo -e "Ctrl-b release keys then d #detach session \nCtrl-b release keys then z #panel full screen, shrink back  \nCtrl-b release keys then o #switch trough sessions \ntmux ls #list sessions"' enter; \
 }
 #tmux with bmon, bandwhich,gdu,duf,iftopx,nettopx
