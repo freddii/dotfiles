@@ -528,7 +528,8 @@ alias sessiontree="loginctl session-status 2"
 alias apt-installed="apt list --installed" #apt list --installed | cut -f1 -d"/"
 #alias jnettopx="sudo jnettop -i $(echo $(ls /sys/class/net) | grep -o '\bwl\w*' | tail -1)"
 #alias xwlan0x="echo $(ls /sys/class/net) | grep -o '\bwl\w*' | tail -1"
-
+alias picshow="cacaview"
+alias remoteprogram="xpra start ssh://pi@raspberrypi/ --start=xterm"
 gpgdw(){
 filen=$(echo "$1" | head -c-5)
 gpg -d "$1" > $filen
