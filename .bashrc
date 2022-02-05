@@ -1229,7 +1229,7 @@ wdrnews(){
 }
 
 ts(){
-	local streamurl="https:"$(wget https://www.tagesschau.de/sendung/letzte-sendung/ -O - | egrep '//download.media.tagesschau.de/video/[A-Za-z0-9,_.-\/]{1,50}TV-[0-9,_.-]{1,40}.webm.h264.mp4' -o | head -1)
+	local streamurl="https:"$(wget --quiet https://www.tagesschau.de/sendung/letzte-sendung/ -O - | egrep '//download.media.tagesschau.de/video/[A-Za-z0-9,_.-\/]{1,50}TV-[0-9,_.-]{1,40}.webm.h264.mp4' -o | head -1)
 	echo "streamurl: "$streamurl
 	mpv $streamurl
 }
@@ -1241,7 +1241,7 @@ ts100(){
 }
 
 hj(){
-	local streamurl=$(wget https://www.zdf.de/rss/podcast/video/zdf/nachrichten/heute-journal -O - | egrep 'https://podfileszdf-a.akamaihd.net/podcast/zdf_podcasts/[0-9,_.-\/]{1,20}_sendung_hjo[0-9,_.-\/]{1,20}_sendung_hjo_[A-Za-z0-9,_.-\/]{1,30}.mp4' -o | head -1)
+	local streamurl=$(wget --quiet https://www.zdf.de/rss/podcast/video/zdf/nachrichten/heute-journal -O - | egrep 'https://podfileszdf-a.akamaihd.net/podcast/zdf_podcasts/[0-9,_.-\/]{1,20}_sendung_hjo[0-9,_.-\/]{1,20}_sendung_hjo_[A-Za-z0-9,_.-\/]{1,30}.mp4' -o | head -1)
 	echo "streamurl: "$streamurl
 	mpv $streamurl
 }
