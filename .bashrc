@@ -1225,7 +1225,7 @@ twitch(){
  }
 
 wdrnews(){
-	mpv --no-video "https:"$(wget https://www1.wdr.de/mediathek/audio/wdr-aktuell-news/index.html -O - | egrep '//wdr[A-Za-z0-9,_.-]{1,20}akamaihd.net[A-Za-z0-9,_.-\/]{1,50}wdraktuell_[0-9,_.-]{1,20}_wdraktuellum[0-9,_]{1,10}uhr_wdr2.mp3' -o | head -1)
+	mpv --no-video "https:"$(wget --quiet https://www1.wdr.de/mediathek/audio/wdr-aktuell-news/index.html -O - | egrep '//wdr[A-Za-z0-9,_.-]{1,20}akamaihd.net[A-Za-z0-9,_.-\/]{1,50}wdraktuell_[0-9,_.-]{1,20}_wdraktuellum[0-9,_]{1,10}uhr_wdr2.mp3' -o | head -1)
 }
 
 ts(){
@@ -1235,7 +1235,7 @@ ts(){
 }
 
 ts100(){
-	local streamurl="https:"$(wget https://www.tagesschau.de/100sekunden/ -O - | egrep '//download.media.tagesschau.de/video/[A-Za-z0-9,_.-\/]{1,50}TV-[0-9,_.-]{1,40}.webm.h264.mp4' -o | head -1)
+	local streamurl="https:"$(wget --quiet https://www.tagesschau.de/100sekunden/ -O - | egrep '//download.media.tagesschau.de/video/[A-Za-z0-9,_.-\/]{1,50}TV-[0-9,_.-]{1,40}.webm.h264.mp4' -o | head -1)
 	echo "streamurl: "$streamurl
 	mpv $streamurl
 }
