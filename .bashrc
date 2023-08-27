@@ -31,6 +31,10 @@ export NNN_PLUG='f:finder;o:fzopen;p:mocplay;d:diffs;t:nmount;v:imgview;k:kdecon
 
 TELNUMBER=015123456789
 
+# Turn off system beep in console:
+xset b off
+xset b 0 0 0
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
